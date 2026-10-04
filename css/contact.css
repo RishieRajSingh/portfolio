@@ -1,0 +1,72 @@
+/* =========================
+   CONTACT
+   ========================= */
+
+#contact {
+    text-align: center;
+    border-bottom: none;
+}
+
+#contact > h2 {
+    display: block;
+}
+
+#contact > h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#contact-message {
+    max-width: 650px;
+    margin: auto;
+    color: var(--text-soft);
+}
+
+#contact-email {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--accent-light);
+    font-weight: 600;
+}
+
+#contact p:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+#contact p:last-child a {
+    padding: 9px 17px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    color: var(--text-soft);
+    font-size: 0.85rem;
+    transition: 0.25s ease;
+}
+
+#contact p:last-child a:hover {
+    color: var(--accent-light);
+    border-color: var(--accent);
+    background: rgba(139, 92, 246, 0.06);
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+    #contact-message {
+        font-size: 0.94rem;
+    }
+
+    #contact p:last-child {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #contact p:last-child a {
+        padding: 8px 14px;
+        font-size: 0.82rem;
+    }
+}

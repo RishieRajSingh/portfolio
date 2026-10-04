@@ -1,0 +1,90 @@
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+#about-description {
+    max-width: 850px;
+    color: var(--text-soft);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+#about-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 26px;
+}
+
+#about-interests span {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+#about-interests span::before {
+    content: "•";
+    margin-right: 7px;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+#about-interests span:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-border);
+    background: var(--accent-soft);
+    color: var(--text);
+}
+
+
+/* =========================================================
+   ABOUT RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #about-description {
+        font-size: 0.98rem;
+        line-height: 1.75;
+    }
+
+    #about-interests {
+        gap: 8px;
+        margin-top: 22px;
+    }
+
+    #about-interests span {
+        padding: 7px 11px;
+        font-size: 0.76rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    #about-description {
+        font-size: 0.94rem;
+        line-height: 1.7;
+    }
+
+    #about-interests {
+        gap: 7px;
+        margin-top: 20px;
+    }
+
+    #about-interests span {
+        padding: 6px 10px;
+        font-size: 0.74rem;
+    }
+}

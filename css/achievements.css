@@ -1,0 +1,100 @@
+/* =========================
+   ACHIEVEMENTS
+   ========================= */
+
+#achievements-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#achievements-container article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 26px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background:
+        linear-gradient(145deg, rgba(124, 156, 255, 0.035), transparent 45%),
+        var(--card);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+#achievements-container article::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    opacity: 0.7;
+}
+
+#achievements-container article:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-border);
+    background:
+        linear-gradient(145deg, rgba(124, 156, 255, 0.06), transparent 45%),
+        var(--card-hover);
+}
+
+#achievements-container h3 {
+    margin-bottom: 9px;
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+#achievements-container p {
+    color: var(--text-soft);
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+#achievements-container .achievement-details {
+    align-self: flex-start;
+    margin-top: 16px;
+    padding: 5px 10px;
+    border: 1px solid var(--accent-border);
+    border-radius: 7px;
+    background: var(--accent-soft);
+    color: var(--accent-light);
+    font-size: 0.73rem;
+    font-weight: 600;
+}
+
+#achievements-container a {
+    align-self: flex-start;
+    margin-top: 17px;
+    color: var(--accent-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+#achievements-container a:hover {
+    color: var(--text);
+    transform: translateX(2px);
+}
+
+@media (max-width: 700px) {
+    #achievements-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    #achievements-container article {
+        padding: 22px 23px;
+    }
+}
+
+@media (max-width: 480px) {
+    #achievements-container article {
+        padding: 20px;
+    }
+
+    #achievements-container h3 {
+        font-size: 0.96rem;
+    }
+}

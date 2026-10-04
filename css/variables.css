@@ -1,0 +1,46 @@
+/* =========================================================
+   DESIGN VARIABLES
+   ========================================================= */
+
+:root {
+    /* Backgrounds */
+    --bg: #09090b;
+    --bg-soft: #0f0f12;
+    --surface: #151518;
+    --surface-hover: #1b1b20;
+
+    /* Cards */
+    --card: #111114;
+    --card-hover: #17171b;
+
+    /* Borders */
+    --border: #27272a;
+    --border-light: #38383f;
+    --border-strong: #45454d;
+
+    /* Text */
+    --text: #f4f4f5;
+    --text-soft: #a1a1aa;
+    --text-muted: #71717a;
+    --muted: #8a8a93;
+
+    /* Accent */
+    --accent: #8b5cf6;
+    --accent-light: #a78bfa;
+    --accent-dark: #6d28d9;
+
+    /* Accent backgrounds / borders */
+    --accent-soft: rgba(139, 92, 246, 0.08);
+    --accent-border: rgba(139, 92, 246, 0.35);
+
+    /* Success */
+    --success: #4ade80;
+    --success-soft: rgba(74, 222, 128, 0.08);
+
+    /* Layout */
+    --max-width: 1150px;
+    --radius: 14px;
+
+    /* Shadows */
+    --shadow: 0 15px 40px rgba(0, 0, 0, 0.16);
+}
