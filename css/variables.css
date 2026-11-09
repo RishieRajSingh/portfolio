@@ -1,5 +1,6 @@
+
 /* =========================================================
-   DESIGN VARIABLES
+   DESIGN TOKENS
    ========================================================= */
 
 :root {
@@ -28,19 +29,28 @@
     --accent: #8b5cf6;
     --accent-light: #a78bfa;
     --accent-dark: #6d28d9;
+    --accent-soft: rgb(139 92 246 / 8%);
+    --accent-border: rgb(139 92 246 / 35%);
 
-    /* Accent backgrounds / borders */
-    --accent-soft: rgba(139, 92, 246, 0.08);
-    --accent-border: rgba(139, 92, 246, 0.35);
-
-    /* Success */
+    /* Status */
     --success: #4ade80;
-    --success-soft: rgba(74, 222, 128, 0.08);
+    --success-soft: rgb(74 222 128 / 8%);
 
     /* Layout */
     --max-width: 1150px;
+    --page-gutter: 30px;
+    --section-spacing: 65px;
+    --header-height: 72px;
+
+    /* Radius */
     --radius: 14px;
+    --radius-small: 8px;
 
     /* Shadows */
-    --shadow: 0 15px 40px rgba(0, 0, 0, 0.16);
+    --shadow: 0 15px 40px rgb(0 0 0 / 16%);
+    --shadow-card: 0 25px 60px rgb(0 0 0 / 28%);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
 }

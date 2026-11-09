@@ -1,6 +1,7 @@
-/* =========================
+
+/* =========================================================
    HERO
-   ========================= */
+   ========================================================= */
 
 #home {
     position: relative;
@@ -8,8 +9,8 @@
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
     align-items: center;
     gap: 70px;
-    min-height: calc(100vh - 72px);
-    padding: 40px 0 50px;
+    min-height: calc(100vh - var(--header-height));
+    padding-block: 40px 50px;
     overflow: hidden;
 }
 
@@ -22,20 +23,30 @@
 }
 
 #home::before {
-    right: -220px;
     top: 12%;
+    right: -220px;
     width: 520px;
-    height: 520px;
-    background: radial-gradient(circle, rgba(109, 40, 217, 0.13), transparent 70%);
+    aspect-ratio: 1;
+    background: radial-gradient(
+        circle,
+        rgb(109 40 217 / 13%),
+        transparent 70%
+    );
 }
 
 #home::after {
-    left: -300px;
     bottom: -300px;
+    left: -300px;
     width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(124, 156, 255, 0.05), transparent 70%);
+    aspect-ratio: 1;
+    background: radial-gradient(
+        circle,
+        rgb(124 156 255 / 5%),
+        transparent 70%
+    );
 }
+
+/* Hero Content */
 
 .hero-content {
     position: relative;
@@ -49,6 +60,7 @@
     line-height: 1.02;
     letter-spacing: -3px;
     font-weight: 800;
+    overflow-wrap: anywhere;
 }
 
 #hero-title {
@@ -67,7 +79,7 @@
     line-height: 1.75;
 }
 
-/* Buttons */
+/* Hero Actions */
 
 .hero-actions {
     display: flex;
@@ -77,39 +89,46 @@
 }
 
 #projects-button,
-#contact-button {
+#contact-button,
+#resume-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-height: 44px;
     padding: 12px 23px;
-    border-radius: 8px;
+    border-radius: var(--radius-small);
     font-size: 0.92rem;
     font-weight: 600;
-    transition: 0.25s ease;
+    transition:
+        transform var(--transition-fast),
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
 }
 
 #projects-button {
     background: var(--accent);
     color: #fff;
-    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 8px 25px rgb(139 92 246 / 20%);
 }
 
 #projects-button:hover {
     background: var(--accent-light);
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 12px 30px rgb(139 92 246 / 30%);
 }
 
-#contact-button {
+#contact-button,
+#resume-button {
     border: 1px solid var(--border-light);
-    background: rgba(255, 255, 255, 0.02);
+    background: rgb(255 255 255 / 2%);
     color: var(--text);
 }
 
-#contact-button:hover {
+#contact-button:hover,
+#resume-button:hover {
     border-color: var(--accent);
-    background: rgba(139, 92, 246, 0.06);
+    background: var(--accent-soft);
     transform: translateY(-2px);
 }
 
@@ -119,8 +138,8 @@
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .hero-image::before,
@@ -134,36 +153,48 @@
 
 .hero-image::before {
     width: 340px;
-    height: 340px;
-    background: radial-gradient(circle, rgba(124, 156, 255, 0.14), transparent 70%);
+    aspect-ratio: 1;
+    background: radial-gradient(
+        circle,
+        rgb(124 156 255 / 14%),
+        transparent 70%
+    );
 }
 
 .hero-image::after {
     width: 290px;
-    height: 290px;
+    aspect-ratio: 1;
     border: 1px solid var(--accent-border);
     opacity: 0.35;
 }
 
 .hero-image img {
-    display: block;
     width: min(320px, 100%);
     aspect-ratio: 1;
     object-fit: cover;
     border: 1px solid var(--border-light);
     border-radius: 24px;
     background: var(--card);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28), 0 0 40px rgba(124, 156, 255, 0.08);
-    transition: 0.3s ease;
+    box-shadow:
+        var(--shadow-card),
+        0 0 40px rgb(124 156 255 / 8%);
+    transition:
+        transform var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
 }
 
 .hero-image img:hover {
     transform: translateY(-5px);
     border-color: var(--accent-border);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.32), 0 0 50px rgba(124, 156, 255, 0.12);
+    box-shadow:
+        0 30px 70px rgb(0 0 0 / 32%),
+        0 0 50px rgb(124 156 255 / 12%);
 }
 
-/* Responsive */
+/* =========================================================
+   RESPONSIVE HERO
+   ========================================================= */
 
 @media (max-width: 950px) {
     #home {
@@ -182,12 +213,10 @@
 
     .hero-image::before {
         width: 290px;
-        height: 290px;
     }
 
     .hero-image::after {
         width: 245px;
-        height: 245px;
     }
 }
 
@@ -199,7 +228,7 @@
         justify-content: center;
         gap: 40px;
         min-height: auto;
-        padding: 70px 0;
+        padding-block: 70px;
     }
 
     .hero-image {
@@ -214,15 +243,13 @@
     }
 
     .hero-image::before {
-        width: 220px;
-        height: 220px;
         left: -15px;
+        width: 220px;
     }
 
     .hero-image::after {
-        width: 180px;
-        height: 180px;
         left: 5px;
+        width: 180px;
     }
 
     .hero-content {
@@ -252,7 +279,7 @@
 @media (max-width: 480px) {
     #home {
         gap: 32px;
-        padding: 55px 0;
+        padding-block: 55px;
     }
 
     .hero-image img {
@@ -262,12 +289,10 @@
 
     .hero-image::before {
         width: 185px;
-        height: 185px;
     }
 
     .hero-image::after {
         width: 150px;
-        height: 150px;
     }
 
     #hero-name {
@@ -289,7 +314,8 @@
     }
 
     #projects-button,
-    #contact-button {
+    #contact-button,
+    #resume-button {
         width: 100%;
     }
 }

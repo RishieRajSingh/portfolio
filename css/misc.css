@@ -13,7 +13,7 @@
     border: 1px solid var(--border);
     border-radius: 10px;
     background: var(--surface);
-    transition: 0.2s ease;
+    transition: var(--transition-normal);
 }
 
 #technical-writing-container article:hover {
@@ -43,6 +43,7 @@
     gap: 14px;
 }
 
+/* Shared card styles */
 #currently-working-container article,
 .working-projects,
 .working-small-card {
@@ -50,10 +51,7 @@
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--card);
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
+    transition: var(--transition-normal);
 }
 
 
@@ -70,6 +68,7 @@
     font-size: 1.15rem;
 }
 
+/* Reset default article card styling inside active projects */
 .working-projects article {
     padding: 0;
     border: none;
@@ -217,26 +216,9 @@
     color: var(--accent-light);
     font-size: 0.74rem;
     font-weight: 600;
-    transition: color 0.2s ease;
+    transition: color var(--transition-speed);
 }
 
 .coding-profile a:hover {
     color: var(--text);
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 850px) {
-    #currently-working-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    #currently-working-container {
-        grid-template-columns: 1fr;
-    }
 }

@@ -1,6 +1,6 @@
-/* =========================
+/* =========================================================
    ACHIEVEMENTS
-   ========================= */
+   ========================================================= */
 
 #achievements-container {
     display: grid;
@@ -20,7 +20,10 @@
         var(--card);
     box-shadow: var(--shadow);
     overflow: hidden;
-    transition: 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
 }
 
 #achievements-container article::before {
@@ -70,31 +73,10 @@
     color: var(--accent-light);
     font-size: 0.78rem;
     font-weight: 600;
-    transition: 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 #achievements-container a:hover {
     color: var(--text);
     transform: translateX(2px);
-}
-
-@media (max-width: 700px) {
-    #achievements-container {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    #achievements-container article {
-        padding: 22px 23px;
-    }
-}
-
-@media (max-width: 480px) {
-    #achievements-container article {
-        padding: 20px;
-    }
-
-    #achievements-container h3 {
-        font-size: 0.96rem;
-    }
 }

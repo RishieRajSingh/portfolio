@@ -39,34 +39,14 @@
 #contact p:last-child a {
     padding: 9px 17px;
     border: 1px solid var(--border-light);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     color: var(--text-soft);
     font-size: 0.85rem;
-    transition: 0.25s ease;
+    transition: var(--transition-normal);
 }
 
 #contact p:last-child a:hover {
     color: var(--accent-light);
     border-color: var(--accent);
     background: rgba(139, 92, 246, 0.06);
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 480px) {
-    #contact-message {
-        font-size: 0.94rem;
-    }
-
-    #contact p:last-child {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    #contact p:last-child a {
-        padding: 8px 14px;
-        font-size: 0.82rem;
-    }
 }

@@ -1,214 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title id="page-title"></title>
+  <meta
+    name="description"
+    content="Explore my portfolio featuring Java, Spring Boot, full-stack development, projects, skills, and professional experience."
+  >
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/details.css">
+  <meta name="theme-color" content="#0b1120">
+
+  <title id="page-title">Portfolio</title>
+
+  <!-- Main stylesheet imports all CSS modules -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Portfolio data and rendering logic -->
+  <script type="module" src="./js/script.js"></script>
 </head>
 
 <body>
-
-    <!-- ==================== HEADER ==================== -->
-
-    <header>
-        <nav>
-
-            <div id="nav-name"></div>
-
-            <div>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#achievements">Achievements</a>
-                <a href="#certifications">Certifications</a>
-                <a href="#contact">Contact</a>
-            </div>
-
-        </nav>
-    </header>
-
-
-    <main>
-
-        <!-- ==================== HOME ==================== -->
-
-        <section id="home">
-
-            <div class="hero-content">
-
-                <p id="hero-greeting"></p>
-
-                <h1 id="hero-name"></h1>
-
-                <h2 id="hero-title"></h2>
-
-                <p id="hero-description"></p>
-
-                <div class="hero-actions">
-                    <a id="projects-button" href="#projects"></a>
-                    <a id="contact-button" href="#contact"></a>
-                    <a id="resume-button"></a>
-                </div>
-
-            </div>
-
-            <div class="hero-image">
-                <img id="hero-profile-image" src="" alt="">
-            </div>
-
-        </section>
-
-
-        <!-- ==================== ABOUT ==================== -->
-
-        <section id="about">
-
-            <h2>About Me</h2>
-
-            <p id="about-description"></p>
-
-            <div id="about-interests"></div>
-
-        </section>
-
-
-        <!-- ==================== SKILLS ==================== -->
-
-        <section id="skills">
-
-            <h2>Skills</h2>
-
-            <div id="skills-container"></div>
-
-        </section>
-
-
-        <!-- ==================== EXPERIENCE ==================== -->
-
-        <section id="experience">
-
-            <h2>Experience</h2>
-
-            <div id="experience-container"></div>
-
-        </section>
-
-
-        <!-- ==================== PROJECTS ==================== -->
-
-        <section id="projects">
-
-            <h2>Projects</h2>
-
-            <div id="projects-container"></div>
-
-        </section>
-
-
-        <!-- ==================== EDUCATION ==================== -->
-
-        <section id="education">
-
-            <h2>Education</h2>
-
-            <div id="education-container"></div>
-
-        </section>
-
-
-        <!-- ==================== ACHIEVEMENTS ==================== -->
-
-        <section id="achievements">
-
-            <h2>Achievements</h2>
-
-            <div id="achievements-container"></div>
-
-        </section>
-
-
-        <!-- ==================== CERTIFICATIONS ==================== -->
-
-        <section id="certifications">
-
-            <h2>Certifications</h2>
-
-            <div id="certifications-container"></div>
-
-        </section>
-
-
-        <!-- ==================== TECHNICAL WRITING ==================== -->
-
-        <section id="technical-writing">
-
-            <h2>Technical Writing</h2>
-
-            <div id="technical-writing-container"></div>
-
-        </section>
-
-
-        <!-- ==================== CURRENTLY WORKING ON ==================== -->
-
-        <section id="currently-working">
-
-            <h2>Currently Working On</h2>
-
-            <div id="currently-working-container"></div>
-
-        </section>
-
-
-        <!-- ==================== CONTACT ==================== -->
-
-        <section id="contact">
-
-            <h2 id="contact-heading"></h2>
-
-            <p id="contact-message"></p>
-
-            <p>
-                Email:
-                <a id="contact-email"></a>
-            </p>
-
-            <p>
-                Phone:
-                <span id="contact-phone"></span>
-            </p>
-
-            <p>
-                <a id="github-link">GitHub</a>
-                <a id="linkedin-link">LinkedIn</a>
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <!-- ==================== FOOTER ==================== -->
-
-    <footer>
-
-        <p id="footer-text"></p>
-
-    </footer>
-
-
-    <!-- ==================== JAVASCRIPT ==================== -->
-
-    <script type="module" src="./js/script.js"></script>
-
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a
+        class="nav-brand"
+        id="nav-name"
+        href="#home"
+        aria-label="Go to homepage"
+      ></a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" aria-labelledby="hero-name">
+      <div class="hero-content">
+        <p id="hero-greeting"></p>
+        <h1 id="hero-name"></h1>
+        <h2 id="hero-title"></h2>
+        <p id="hero-description"></p>
+
+        <div class="hero-actions">
+          <a id="projects-button" href="#projects"></a>
+          <a id="contact-button" href="#contact"></a>
+
+          <a
+            id="resume-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          id="hero-profile-image"
+          src=""
+          alt="Profile portrait"
+          width="400"
+          height="400"
+          fetchpriority="high"
+        >
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p id="about-description"></p>
+      <div id="about-interests"></div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div id="skills-container"></div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <div id="experience-container"></div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div id="projects-container"></div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <div id="education-container"></div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" aria-labelledby="achievements-heading">
+      <h2 id="achievements-heading">Achievements</h2>
+      <div id="achievements-container"></div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" aria-labelledby="certifications-heading">
+      <h2 id="certifications-heading">Certifications</h2>
+      <div id="certifications-container"></div>
+    </section>
+
+    <!-- Technical Writing -->
+    <section
+      id="technical-writing"
+      aria-labelledby="technical-writing-heading"
+    >
+      <h2 id="technical-writing-heading">Technical Writing</h2>
+      <div id="technical-writing-container"></div>
+    </section>
+
+    <!-- Currently Working On -->
+    <section
+      id="currently-working"
+      aria-labelledby="currently-working-heading"
+    >
+      <h2 id="currently-working-heading">Currently Working On</h2>
+      <div id="currently-working-container"></div>
+    </section>
+
+<!-- Contact -->
+<section id="contact" aria-labelledby="contact-heading">
+  <h2 id="contact-heading">Contact</h2>
+
+  <p id="contact-message"></p>
+
+  <div id="contact-container">
+    <a id="contact-email"></a>
+    <a id="github-link" target="_blank" rel="noopener noreferrer"></a>
+    <a id="linkedin-link" target="_blank" rel="noopener noreferrer"></a>
+  </div>
+</section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p id="footer-text"></p>
+  </footer>
 </body>
-
 </html>

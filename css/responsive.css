@@ -1,0 +1,345 @@
+/* =========================================
+   Responsive Styles
+   ========================================= */
+
+@media (max-width: 1024px) {
+  :root {
+    --page-gutter: 2rem;
+  }
+
+  .navbar { gap: 1.5rem; }
+  .nav-links { gap: 1rem; }
+  #home { gap: 3rem; }
+
+  .hero-content h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+  .hero-content h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+  .hero-image img { max-width: 320px; }
+}
+
+@media (max-width: 900px) {
+  #education-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  #currently-working-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-gutter: 1.5rem;
+    --section-spacing: 4rem;
+  }
+
+  .site-header { padding: 1rem var(--page-gutter); }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .nav-links a { font-size: 0.9rem; }
+
+  main > section {
+    padding: var(--section-spacing) var(--page-gutter);
+  }
+
+  #home {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-content { order: 2; }
+  .hero-image { order: 1; }
+
+  .hero-image img {
+    width: min(70%, 280px);
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .skills-container,
+  .projects-container,
+  .experience-container,
+  .education-container,
+  .certifications-container,
+  .achievements-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card,
+  .experience-card,
+  .education-card,
+  .certificate-card,
+  .achievement-card {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  #experience-container { gap: 22px; }
+  #experience-container::before { left: 8px; }
+
+  .experience-card {
+    margin-left: 28px;
+    padding: 24px 22px;
+  }
+
+  .experience-card::before {
+    top: 28px;
+    left: -25px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .experience-card::after {
+    top: 18px;
+    bottom: 18px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .experience-meta {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .experience-summary { margin: 20px 0 22px; }
+
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 11px;
+    padding: 16px 0;
+  }
+
+  .skill-row h3 { font-size: 0.7rem; }
+  .skill-items { gap: 7px; }
+
+  .skill-items span {
+    padding: 6px 9px;
+    font-size: 0.74rem;
+  }
+
+  #about-description {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  #about-interests {
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  #about-interests span {
+    padding: 7px 11px;
+    font-size: 0.76rem;
+  }
+
+  #achievements-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  #achievements-container article { padding: 22px 23px; }
+
+  #education-container { grid-template-columns: 1fr; }
+  #education-container article { padding: 21px; }
+
+  .slider-viewport,
+  .projects-viewport {
+    width: calc(100% - 58px);
+  }
+
+  .slider-arrow,
+  .project-arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .slider-arrow { font-size: 1rem; }
+  .project-arrow { font-size: 1.1rem; }
+
+  .slider-prev,
+  .project-prev { left: 4px; }
+
+  .slider-next,
+  .project-next { right: 4px; }
+
+  .project-card {
+    min-height: 390px;
+    padding: 22px 20px;
+  }
+
+  .project-top { gap: 8px; }
+  .project-top h3 { font-size: 1.15rem; }
+
+  .project-description {
+    margin-top: 17px;
+    font-size: 0.86rem;
+  }
+
+  #certifications-container article {
+    gap: 16px;
+    padding: 15px 2px;
+  }
+
+  #certifications-container h3 { font-size: 0.9rem; }
+  #certifications-container p { font-size: 0.76rem; }
+}
+
+@media (max-width: 600px) {
+  #currently-working-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --page-gutter: 1rem;
+    --section-spacing: 3rem;
+  }
+
+  .site-header { padding: 0.875rem var(--page-gutter); }
+  .nav-brand { font-size: 1.1rem; }
+  .nav-links { gap: 0.65rem 1rem; }
+  .nav-links a { font-size: 0.85rem; }
+
+  #home {
+    padding-top: 2.5rem;
+    gap: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.15;
+  }
+
+  .hero-content h2 {
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .hero-image img { width: min(75%, 230px); }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero-actions a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills-container,
+  .projects-container,
+  .experience-container,
+  .education-container,
+  .certifications-container,
+  .achievements-container {
+    grid-template-columns: 1fr;
+  }
+
+  p,
+  li,
+  a { overflow-wrap: anywhere; }
+
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table { min-width: 500px; }
+
+  .slider-viewport,
+  .projects-viewport {
+    width: calc(100% - 50px);
+  }
+
+  .slider-arrow,
+  .project-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .slider-arrow { font-size: 0.95rem; }
+  .project-arrow { font-size: 1rem; }
+
+  .slider-prev,
+  .project-prev { left: 2px; }
+
+  .slider-next,
+  .project-next { right: 2px; }
+
+  .project-card {
+    min-height: 370px;
+    padding: 20px 18px;
+  }
+
+  #about-description {
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+
+  #about-interests {
+    gap: 7px;
+    margin-top: 20px;
+  }
+
+  #about-interests span {
+    padding: 6px 10px;
+    font-size: 0.74rem;
+  }
+
+  #achievements-container article { padding: 20px; }
+  #achievements-container h3 { font-size: 0.96rem; }
+
+  #contact-message { font-size: 0.94rem; }
+
+  #contact p:last-child {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #contact p:last-child a {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

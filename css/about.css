@@ -1,7 +1,4 @@
-/* =========================================================
-   ABOUT
-   ========================================================= */
-
+/* ABOUT */
 #about-description {
     max-width: 850px;
     color: var(--text-soft);
@@ -26,11 +23,7 @@
     color: var(--muted);
     font-size: 0.8rem;
     font-weight: 500;
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        background 0.25s ease,
-        color 0.25s ease;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
 }
 
 #about-interests span::before {
@@ -45,46 +38,4 @@
     border-color: var(--accent-border);
     background: var(--accent-soft);
     color: var(--text);
-}
-
-
-/* =========================================================
-   ABOUT RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    #about-description {
-        font-size: 0.98rem;
-        line-height: 1.75;
-    }
-
-    #about-interests {
-        gap: 8px;
-        margin-top: 22px;
-    }
-
-    #about-interests span {
-        padding: 7px 11px;
-        font-size: 0.76rem;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    #about-description {
-        font-size: 0.94rem;
-        line-height: 1.7;
-    }
-
-    #about-interests {
-        gap: 7px;
-        margin-top: 20px;
-    }
-
-    #about-interests span {
-        padding: 6px 10px;
-        font-size: 0.74rem;
-    }
 }

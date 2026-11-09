@@ -4,7 +4,7 @@
 
 #education-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
@@ -15,33 +15,33 @@
     min-width: 0;
     padding: 24px;
     overflow: hidden;
+
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--card);
     box-shadow: var(--shadow);
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        background 0.25s ease;
+
+    transition: var(--transition-normal);
 }
 
+/* Accent line */
 #education-container article::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    inset: 0 0 auto;
     height: 3px;
     background: var(--accent);
     opacity: 0.8;
 }
 
+/* Card hover */
 #education-container article:hover {
     transform: translateY(-4px);
     border-color: var(--accent-border);
     background: var(--card-hover);
 }
 
+/* Institution */
 #education-container h3 {
     margin-bottom: 9px;
     color: var(--text);
@@ -49,6 +49,7 @@
     line-height: 1.4;
 }
 
+/* Degree */
 .education-degree {
     color: var(--accent);
     font-size: 0.82rem;
@@ -56,6 +57,7 @@
     line-height: 1.5;
 }
 
+/* Location and date */
 .education-location,
 .education-date {
     color: var(--muted);
@@ -79,6 +81,7 @@
     font-size: 0.8rem;
 }
 
+/* Score */
 .education-score {
     margin-top: auto;
     padding-top: 18px;
@@ -87,28 +90,9 @@
     font-weight: 600;
 }
 
+/* Affiliation */
 .education-affiliation {
     margin-top: 4px;
     color: var(--muted);
     font-size: 0.74rem;
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-
-@media (max-width: 900px) {
-    #education-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 600px) {
-    #education-container {
-        grid-template-columns: 1fr;
-    }
-
-    #education-container article {
-        padding: 21px;
-    }
 }

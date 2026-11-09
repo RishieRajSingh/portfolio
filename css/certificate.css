@@ -15,12 +15,11 @@
     gap: 30px;
     padding: 16px 4px;
     border-bottom: 1px solid var(--border);
-    transition: 0.25s ease;
+    transition: var(--transition-normal);
 }
 
 #certifications-container article:hover {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-inline: 8px;
     background: linear-gradient(
         90deg,
         var(--accent-soft),
@@ -28,7 +27,6 @@
     );
 }
 
-/* Certificate title */
 #certifications-container h3 {
     margin: 0;
     color: var(--text);
@@ -37,7 +35,6 @@
     line-height: 1.4;
 }
 
-/* Issuer / date */
 #certifications-container p {
     margin: 2px 0 0;
     color: var(--text-soft);
@@ -45,7 +42,6 @@
     line-height: 1.4;
 }
 
-/* Credential link */
 #certifications-container a {
     color: var(--accent-light);
     font-size: 0.75rem;
@@ -55,23 +51,4 @@
 
 #certifications-container a:hover {
     color: var(--text);
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 600px) {
-    #certifications-container article {
-        gap: 16px;
-        padding: 15px 2px;
-    }
-
-    #certifications-container h3 {
-        font-size: 0.9rem;
-    }
-
-    #certifications-container p {
-        font-size: 0.76rem;
-    }
 }

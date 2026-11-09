@@ -1,14 +1,24 @@
-@import url("./css/about.css");
-@import url("./css/achievements.css");
+/* 1. Design tokens */
+@import url("./css/variables.css");
+
+/* 2. Global styles */
 @import url("./css/base.css");
+
+/* 3. Section styles */
+@import url("./css/hero.css");
+@import url("./css/about.css");
+@import url("./css/skills.css");
+@import url("./css/experience.css");
+@import url("./css/projects.css");
+@import url("./css/education.css");
+@import url("./css/achievements.css");
 @import url("./css/certificate.css");
 @import url("./css/contact.css");
-@import url("./css/education.css");
-@import url("./css/experience.css");
-@import url("./css/hero.css"); 
-@import url("./css/misc.css"); 
-@import url("./css/projects.css");
-@import url("./css/responsive.css");
-@import url("./css/skills.css");
-@import url("./css/variables.css");
+@import url("./css/misc.css");
+
+/* 4. Shared components */
 @import url("./css/details.css");
+@import url("./css/slider.css");
+
+/* 5. Responsive overrides — keep last */
+@import url("./css/responsive.css");
