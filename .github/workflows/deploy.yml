@@ -29,10 +29,31 @@ jobs:
 
       - name: Create portfolio data file
         env:
-          PORTFOLI_DATA: ${{ secrets.PORTFOLI_DATA }}
+          PORTFOLIO_DATA: ${{ secrets.PORTFOLIO_DATA }}
         run: |
+          if [ -z "$PORTFOLIO_DATA" ]; then
+            echo "ERROR: PORTFOLIO_DATA secret is empty or unavailable"
+            exit 1
+          fi
+
           mkdir -p resources/data
           printf '%s' "$PORTFOLIO_DATA" > resources/data/portfolioData.json
+
+          echo "Portfolio data file created."
+
+      - name: Verify portfolio data file
+        run: |
+          if [ ! -s resources/data/portfolioData.json ]; then
+            echo "ERROR: portfolioData.json is missing or empty"
+            exit 1
+          fi
+
+          echo "File exists and is not empty."
+          wc -c resources/data/portfolioData.json
+
+          python3 -m json.tool resources/data/portfolioData.json > /dev/null
+
+          echo "JSON is valid."
 
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3
